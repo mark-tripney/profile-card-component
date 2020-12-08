@@ -9,21 +9,40 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Frontend Mentor | Profile card component</title>
   </head>
   <body>
     <div id="card">
-      <img
-        src="images/bg-pattern-card.svg"
-        alt="Background image, gradiated circles"
-        class="card-bg"
-      />
-      <img
-        src="images/image-victor.jpg"
-        alt="Photograph of user"
-        class="user-img"
-      />
+      <header>
+        <img
+          src="images/bg-pattern-card.svg"
+          alt="Background image, gradiated circles"
+          class="card-bg"
+        />
+        <img
+          src="images/image-victor.jpg"
+          alt="Photograph of user"
+          class="user-img"
+        />
+      </header>
+      <div id="user-info">
+        <div class="name-age">
+          <p class="name">Victor Crest</p>
+          <p class="age">26</p>
+        </div>
+        <p class="location">London</p>
+      </div>
+      <footer>
+        <p>80K</p>
+        <p>803K</p>
+        <p>1.4K</p>
+      </footer>
     </div>
     <!-- <div class="attribution">
       Challenge by

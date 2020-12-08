@@ -1,38 +1,83 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body,
+header,
+footer,
+#card,
+#user-info,
+.name-age {
+  display: flex;
 }
 
 body {
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
   background-color: #459eac;
 }
 
 #card {
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   height: 374px;
   width: 326px;
   background-color: #fff;
   border-radius: 15px;
-  position: relative;
 }
-#card .card-bg {
+
+header {
+  flex-direction: column;
+  align-items: center;
+}
+header .card-bg {
   width: 100%;
   height: 140px;
   border-radius: 15px 15px 0 0;
-  align-self: flex-start;
 }
-#card .user-img {
-  height: 106px;
-  width: 106px;
+header .user-img {
+  height: 96px;
+  width: 96px;
   border-radius: 50%;
-  border: 5px solid #fff;
-  position: absolute;
-  top: 87px;
+  box-shadow: 0px 0px 0px 5px #fff;
+  margin-top: -48px;
+}
+
+#user-info {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+#user-info .name-age {
+  justify-content: space-between;
+  width: 135px;
+  font-size: 18px;
+}
+#user-info .name-age .name {
+  font-weight: 700;
+  color: #2e3349;
+}
+#user-info .name-age .age {
+  color: #6b7082;
+}
+#user-info .location {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #6b7082;
+}
+
+footer {
+  flex-shrink: 0;
+  justify-content: space-between;
+  height: 88px;
+  width: 233px;
+  font-weight: 700;
+  color: #2e3349;
 }
 
 .attribution {
