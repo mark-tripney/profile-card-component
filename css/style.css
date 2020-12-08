@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #459eac;
+}
+
+#card {
+  display: flex;
+  justify-content: center;
+  height: 374px;
+  width: 326px;
+  background-color: #fff;
+  border-radius: 15px;
+  position: relative;
+}
+#card .card-bg {
+  width: 100%;
+  height: 140px;
+  border-radius: 15px 15px 0 0;
+  align-self: flex-start;
+}
+#card .user-img {
+  height: 106px;
+  width: 106px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 87px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
