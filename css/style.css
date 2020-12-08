@@ -50,7 +50,8 @@ header .user-img {
 #user-info {
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  margin-top: 20px;
   flex-grow: 1;
 }
 #user-info .name-age {
@@ -64,20 +65,35 @@ header .user-img {
 }
 #user-info .name-age .age {
   color: #6b7082;
+  font-weight: 400;
+  color: #6b7082;
 }
 #user-info .location {
   font-size: 14px;
+  font-weight: 400;
   margin-top: 15px;
   color: #6b7082;
 }
 
 footer {
   flex-shrink: 0;
-  justify-content: space-between;
-  height: 88px;
-  width: 233px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
   font-weight: 700;
   color: #2e3349;
+  border-top: 1px solid #e8e9ec;
+  padding-top: 25px;
+}
+
+.stat-category {
+  font-size: 10px;
+  font-weight: 400;
+  color: #6b7082;
 }
 
 .attribution {
