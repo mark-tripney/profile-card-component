@@ -6,10 +6,14 @@
 }
 
 body {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   background: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
   background-repeat: no-repeat;
   background-size: 622px 621px;
   background-position: top -310px right 161px, bottom -310px left 161px;
+  background-color: #459eac;
 }
 
 body,
@@ -19,13 +23,6 @@ footer,
 #user-info,
 .name-age {
   display: flex;
-}
-
-body {
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #459eac;
 }
 
 #card {
@@ -111,4 +108,17 @@ footer {
 }
 .attribution a {
   color: #3e52a3;
+}
+
+@media screen and (min-width: 1440px) {
+  #card {
+    align-self: center;
+    margin: 0;
+    width: 350px;
+  }
+
+  body {
+    background-size: 978px 976px;
+    background-position: top -480px right 764px, bottom -578px right -231px;
+  }
 }
