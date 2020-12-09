@@ -1,5 +1,5 @@
-$dark-text: #2e3349;
-$light-text: #6b7082;
+$dark-text: hsl(229, 23%, 23%);
+$light-text: hsl(0, 0%, 59%);
 
 * {
   box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
   background-repeat: no-repeat;
   background-size: 622px 621px;
   background-position: top -310px right 161px, bottom -310px left 161px;
-  background-color: #459eac;
+  background-color: hsl(185, 75%, 39%);
 }
 
 body,
