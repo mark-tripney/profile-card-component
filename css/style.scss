@@ -6,11 +6,13 @@ $light-text: hsl(0, 0%, 59%);
   margin: 0;
   padding: 0;
   font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: $dark-text;
 }
 
 body {
   justify-content: center;
-  align-items: center;
   height: 100vh;
   background: url('../images/bg-pattern-top.svg'),
     url('../images/bg-pattern-bottom.svg');
@@ -21,8 +23,7 @@ body {
 }
 
 body,
-header,
-footer,
+#stats,
 #card,
 #user-info,
 .name-age {
@@ -31,61 +32,50 @@ footer,
 
 #card {
   flex-direction: column;
-  align-self: flex-start;
-  margin-top: 116px;
+  align-self: flex-start; // In order that card isn't centered, as per design...
+  margin-top: 116px; // ... it is positioned slighly off center, to the top.
   height: 374px;
   width: 326px;
   background-color: #fff;
+  background-image: url('../images/bg-pattern-card.svg');
+  background-size: auto 140px;
+  background-repeat: no-repeat;
   border-radius: 15px;
-}
 
-header {
-  flex-direction: column;
-  align-items: center;
-  .card-bg {
-    object-fit: cover;
-    height: 140px;
-    width: 100%;
-    border-radius: 15px 15px 0 0;
-  }
   .user-img {
     height: 96px;
     width: 96px;
+    align-self: center;
     border-radius: 50%;
-    box-shadow: 0px 0px 0px 5px #fff;
-    margin-top: -48px; // Image height (96px) / 2
+    box-shadow: 0px 0px 0px 5px #fff; // Adds 5px white border
+    margin-top: 92px; // #card background-size height - (.user-img height / 2)
   }
-}
 
-#user-info {
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  margin-top: 20px;
-  flex-grow: 1;
-  .name-age {
-    justify-content: space-between;
-    width: 135px;
-    font-size: 18px;
-    .name {
-      font-weight: 700;
-      color: $dark-text;
-    }
-    .age {
+  #user-info {
+    .age,
+    .location {
       color: $light-text;
       font-weight: 400;
-      color: $light-text;
     }
-  }
-  .location {
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 15px;
-    color: $light-text;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    margin-top: 20px;
+    .name-age {
+      justify-content: space-between;
+      width: 135px;
+      .age {
+        color: $light-text;
+      }
+    }
+    .location {
+      font-size: 14px;
+      margin-top: 15px;
+    }
   }
 }
 
-footer {
+#stats {
   flex-shrink: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -94,8 +84,6 @@ footer {
   align-items: center;
   width: 100%;
   height: 90px;
-  font-weight: 700;
-  color: $dark-text;
   border-top: 1px solid #e8e9ec;
   padding-top: 25px;
 }
@@ -105,14 +93,6 @@ footer {
   font-weight: 400;
   color: $light-text;
   letter-spacing: 1px;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  a {
-    color: hsl(228, 45%, 44%);
-  }
 }
 
 @media screen and (min-width: 1440px) {
