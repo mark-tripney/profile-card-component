@@ -31,6 +31,7 @@ $light-text: hsl(0, 0%, 59%);
 
 #card {
   flex-direction: column;
+  flex-flow: 1;
   height: 374px;
   width: 326px;
   background-color: #fff;
@@ -67,11 +68,13 @@ $light-text: hsl(0, 0%, 59%);
     .location {
       font-size: 14px;
       margin-top: 15px;
+      margin-bottom: 24px;
     }
   }
 }
 
 #stats {
+  flex-shrink: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
