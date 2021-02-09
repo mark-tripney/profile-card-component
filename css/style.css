@@ -8,17 +8,7 @@
   color: #2d3248;
 }
 
-body {
-  justify-content: center;
-  height: 100vh;
-  background: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
-  background-repeat: no-repeat;
-  background-size: 622px 621px;
-  background-position: top -310px right 161px, bottom -310px left 161px;
-  background-color: #19a2ae;
-}
-
-body,
+.wrapper,
 #stats,
 #card,
 #user-info,
@@ -26,10 +16,16 @@ body,
   display: flex;
 }
 
+.wrapper {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../images/bg-pattern-top.svg") no-repeat right 50vw bottom 40vh, url("../images/bg-pattern-bottom.svg") no-repeat left 50vw top 40vh;
+  background-color: #19a2ae;
+}
+
 #card {
   flex-direction: column;
-  align-self: flex-start;
-  margin-top: 116px;
   height: 374px;
   width: 326px;
   background-color: #fff;
@@ -48,7 +44,6 @@ body,
 }
 #card #user-info {
   flex-direction: column;
-  flex-grow: 1;
   align-items: center;
   margin-top: 20px;
 }
@@ -70,7 +65,6 @@ body,
 }
 
 #stats {
-  flex-shrink: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -91,13 +85,6 @@ body,
 
 @media screen and (min-width: 1440px) {
   #card {
-    align-self: center;
-    margin: 0;
     width: 350px;
-  }
-
-  body {
-    background-size: 978px 976px;
-    background-position: top -480px right 764px, bottom -578px right -231px;
   }
 }
