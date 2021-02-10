@@ -1,7 +1,9 @@
 $dark-text: hsl(229, 23%, 23%);
 $light-text: hsl(0, 0%, 59%);
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -23,16 +25,15 @@ $light-text: hsl(0, 0%, 59%);
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('../images/bg-pattern-top.svg') no-repeat right 50vw bottom
-      40vh,
-    url('../images/bg-pattern-bottom.svg') no-repeat left 50vw top 40vh;
+  background: url('../images/bg-pattern-top.svg') no-repeat right 50vw bottom 40vh,
+  url('../images/bg-pattern-bottom.svg') no-repeat left 50vw top 40vh;
   background-color: hsl(185, 75%, 39%);
 }
 
 #card {
   flex-direction: column;
-  flex-flow: 1;
-  height: 374px;
+  align-items: center;
+  max-height: 374px;
   width: 326px;
   background-color: #fff;
   background-image: url('../images/bg-pattern-card.svg');
@@ -47,6 +48,7 @@ $light-text: hsl(0, 0%, 59%);
     border-radius: 50%;
     box-shadow: 0px 0px 0px 5px #fff; // Adds 5px white border
     margin-top: 92px; // #card background-size height - (.user-img height / 2)
+    margin-bottom: 24px;
   }
 
   #user-info {
@@ -55,19 +57,22 @@ $light-text: hsl(0, 0%, 59%);
       color: $light-text;
       font-weight: 400;
     }
+
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+
     .name-age {
       justify-content: space-between;
       width: 135px;
+
       .age {
         color: $light-text;
       }
     }
+
     .location {
       font-size: 14px;
-      margin-top: 15px;
+      margin-top: 7px;
       margin-bottom: 24px;
     }
   }
@@ -81,9 +86,9 @@ $light-text: hsl(0, 0%, 59%);
   justify-items: center;
   align-items: center;
   width: 100%;
-  height: 90px;
+  min-height: 88px;
   border-top: 1px solid #e8e9ec;
-  padding-top: 25px;
+  padding: 25px 20px 0;
 }
 
 .stat-category {

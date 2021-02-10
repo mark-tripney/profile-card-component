@@ -3,3 +3,10 @@
 /profile-card-component-resources
 /config.codekit3
 /css/style.css.map
+/.idea/.gitignore
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/jsLinters/eslint.xml
+/.idea/modules.xml
+/.idea/profile-card-component.iml
+/.idea/vcs.xml
+/.idea/watcherTasks.xml
